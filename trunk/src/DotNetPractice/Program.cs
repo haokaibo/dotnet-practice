@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Runtime.InteropServices;
 
 namespace DotNetPractice
 {
@@ -58,19 +56,25 @@ namespace DotNetPractice
         }
         static void Main(string[] args)
         {
-            IA1 a = new A2();
-            a.Method2();
-            a.Method3();
-            (a as A1).Method();
+            //IA1 a = new A2();
+            //a.Method2();
+            //a.Method3();
+            //(a as A1).Method();
 
-            TestByte();
+            //TestByte();
 
 
-            B1 b = new B1();
-            b.Test();
-            ((B)b).Test();
+            //B1 b = new B1();
+            //b.Test();
+            //((B)b).Test();
 
-            b.Test1(1, "a");
+            //b.Test1(1, "a");
+            // 11110000 128 + 64 + 32 + 16
+            Console.WriteLine(1<<4 & 240);
+            Pos s = new Pos();
+            // Test the Chinese Chess Checkmate
+            Console.WriteLine(Marshal.SizeOf(s));
+            new ChineseChess().FindOutAllTheUnCheckmatedPos1();
 
             Console.Read();
         }
