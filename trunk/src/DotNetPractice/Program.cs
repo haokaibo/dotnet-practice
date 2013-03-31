@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace DotNetPractice
 {
@@ -69,13 +68,16 @@ namespace DotNetPractice
             //((B)b).Test();
 
             //b.Test1(1, "a");
-            // 11110000 128 + 64 + 32 + 16
-            Console.WriteLine(1<<4 & 240);
-            Pos s = new Pos();
-            // Test the Chinese Chess Checkmate
-            Console.WriteLine(Marshal.SizeOf(s));
-            new ChineseChess().FindOutAllTheUnCheckmatedPos1();
 
+
+            // ** Test the Chinese Chess Checkmate
+            // new ChineseChess().FindOutAllTheUnCheckmatedPos1();
+
+            // ** Test the CPUFrequencyAdapter
+            // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU(2.66f);
+            // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU2(new TimeSpan(0, 0, 0, 0, 10), new TimeSpan(0, 0, 0, 0, 10));
+            // new CPUFrequencyAdapter().DynamicAdjustFrequencyOfSingleCPU(100, 10);
+            new CPUFrequencyAdapter().AdjustFrenquecyOfCPUToDrawSINCurve();
             Console.Read();
         }
     }
