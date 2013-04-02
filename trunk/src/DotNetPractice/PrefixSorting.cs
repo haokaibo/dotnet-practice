@@ -29,7 +29,7 @@ namespace DotNetPractice
 
                 m_SwapArray = new int[m_nMaxSwap + 1];
                 m_ReverseCakeArray = m_CakeArray.Clone() as int[];
-                m_ReverseCakeSwapArray = new int[m_nMaxSwap ];
+                m_ReverseCakeSwapArray = new int[m_nMaxSwap + 1];
 
             }
         }
@@ -42,17 +42,13 @@ namespace DotNetPractice
 
         public void Output()
         {
-            Console.WriteLine("Orgigin Array:");
-            for (int i = 0; i < m_CakeArray.Length; i++)
-            {
-                Console.Write("{0}\t", m_CakeArray[i]);
-            }
-            Console.WriteLine();
             Console.WriteLine("Search Times: {0}", m_nSearch);
             Console.WriteLine("Total Swap Times: {0}", m_nMaxSwap);
-            for (int i = 0; i < m_nMaxSwap; i++)
+            Console.WriteLine("Orgigin Array:");
+            Console.Write("\t");
+            for (int i = 0; i < m_CakeArray.Length; i++)
             {
-                Console.Write("{0}\t", m_SwapArray[i]);
+                Console.Write("{0} ", m_CakeArray[i]);
             }
             Console.WriteLine();
             Console.WriteLine("Steps:");
@@ -81,6 +77,7 @@ namespace DotNetPractice
             for (int i = 1; i < cakeArrayLen; i++)
             {
                 t = cakeArray[i] - cakeArray[i - 1];
+                // The nEstimate algorithm should be refined. The situation that the [8 9 7 6 5 4 3 2 1 0] can not be covered.
                 if (t == 1 || t == -1)
                 {
                     continue;
@@ -126,7 +123,8 @@ namespace DotNetPractice
 
             nEstimate = LowerBound(m_ReverseCakeArray);
 
-            if (step + nEstimate >= m_nMaxSwap)
+
+            if (step + nEstimate > m_nMaxSwap)
             {
                 return;
             }
