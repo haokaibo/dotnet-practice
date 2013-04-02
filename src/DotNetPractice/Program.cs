@@ -68,17 +68,47 @@ namespace DotNetPractice
             //((B)b).Test();
 
             //b.Test1(1, "a");
-
-
-            // ** Test the Chinese Chess Checkmate
-            // new ChineseChess().FindOutAllTheUnCheckmatedPos1();
-
-            // ** Test the CPUFrequencyAdapter
-            // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU(2.66f);
-            // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU2(new TimeSpan(0, 0, 0, 0, 10), new TimeSpan(0, 0, 0, 0, 10));
-            // new CPUFrequencyAdapter().DynamicAdjustFrequencyOfSingleCPU(100, 10);
-            new CPUFrequencyAdapter().AdjustFrenquecyOfCPUToDrawSINCurve();
+            Console.WriteLine("1: Chinese Chess Checkmate.");
+            Console.WriteLine("2: CPUFrequencyAdapter.");
+            Console.WriteLine("3: Prefix sorting.");
+            Console.WriteLine("Please input the number of the Test you want to try:");
+            int testNumber = int.Parse(Console.ReadLine());
+            switch (testNumber)
+            {
+                case 1:
+                    // ** Test the Chinese Chess Checkmate
+                    new ChineseChess().FindOutAllTheUnCheckmatedPos1(); break;
+                case 2:
+                    // ** Test the CPUFrequencyAdapter
+                    // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU(2.66f);
+                    // new CPUFrequencyAdapter().StaticAdjustFrequencyOfSingleCPU2(new TimeSpan(0, 0, 0, 0, 10), new TimeSpan(0, 0, 0, 0, 10));
+                    // new CPUFrequencyAdapter().DynamicAdjustFrequencyOfSingleCPU(100, 10);
+                    new CPUFrequencyAdapter().AdjustFrenquecyOfCPUToDrawSINCurve(); break;
+                case 3:
+                    // ** Test the prefix sorting
+                    var prefixSorting = new PrefixSorting(new int[] { 3, 2, 1, 6, 5, 4, 9, 8, 7, 0 });
+                    prefixSorting.Run();
+                    prefixSorting.Output();
+                    break;
+                default:
+                    Console.WriteLine(1 ^ 3);
+                    break;
+            }
             Console.Read();
+
+
+            Console.Read();
+        }
+
+        private static void OutputArray(int[] arr)
+        {
+            Console.Write(arr + ": ");
+            int arrLen = arr.Length;
+            for (int i = 0; i < arrLen; i++)
+            {
+                Console.Write(arr[i] + ", ");
+            }
+            Console.WriteLine();
         }
     }
 }
