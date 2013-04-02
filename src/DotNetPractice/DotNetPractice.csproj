@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ChineseChess.cs" />
     <Compile Include="CPUFrequencyAdapter.cs" />
+    <Compile Include="DividendSearch.cs" />
     <Compile Include="OverrideGetHashcode.cs" />
     <Compile Include="PrefixSorting.cs" />
     <Compile Include="Program.cs" />
