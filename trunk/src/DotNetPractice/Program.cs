@@ -71,8 +71,10 @@ namespace DotNetPractice
             Console.WriteLine("1: Chinese Chess Checkmate.");
             Console.WriteLine("2: CPUFrequencyAdapter.");
             Console.WriteLine("3: Prefix sorting.");
+            Console.WriteLine("4: Dividend search.");
             Console.WriteLine("Please input the number of the Test you want to try:");
             int testNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------");
             switch (testNumber)
             {
                 case 1:
@@ -90,13 +92,16 @@ namespace DotNetPractice
                     prefixSorting.Run();
                     prefixSorting.Output();
                     break;
+                case 4:
+                    // ** Test the dividend search
+                    int targetNum = 4;
+                    Console.WriteLine("The search number [{0}] shoud be insert after the index {1}",
+                        targetNum, new SearchHelper(new int[] { 1, 2, 2, 4, 8 }, targetNum).DividendSearch());
+                    break;
                 default:
                     Console.WriteLine(1 ^ 3);
                     break;
             }
-            Console.Read();
-
-
             Console.Read();
         }
 
