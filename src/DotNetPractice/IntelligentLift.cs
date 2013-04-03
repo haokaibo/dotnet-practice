@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DotNetPractice
 {
@@ -74,8 +71,31 @@ namespace DotNetPractice
             return bf;
         }
 
-        public BestFloor GetTheBestFloor2(){
-            return new BestFloor();
+        public BestFloor GetTheBestFloor2()
+        {
+            BestFloor bf = new BestFloor() { nTargetFloor = 1, nMinFloor = 0 };
+            int N1 = 0, N2 = m_PersonTargets[1], N3 = 0;
+            for (int i = 2; i <= m_FloorCount; i++)
+            {
+                N3 += m_PersonTargets[i];
+                bf.nMinFloor += m_PersonTargets[i] * (i - 1);
+            }
+            for (int i = 2; i <= m_FloorCount; i++)
+            {
+                if (N1 + N2 < N3)
+                {
+                    bf.nTargetFloor = i;
+                    bf.nMinFloor = N1 + N2 - N3;
+                    N1 += N2;
+                    N2 = m_PersonTargets[i];
+                    N3 -= m_PersonTargets[i];
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return bf;
         }
     }
 }
