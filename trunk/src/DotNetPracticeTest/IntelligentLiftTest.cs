@@ -1,6 +1,5 @@
 ﻿using DotNetPractice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace DotNetPracticeTest
 {
@@ -80,6 +79,21 @@ namespace DotNetPracticeTest
             BestFloor expected = new BestFloor() { nTargetFloor = 2, nMinFloor = 4 }; // TODO: 初始化为适当的值
             BestFloor actual;
             actual = target.GetTheBestFloor1();
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for GetTheBestFloor2
+        ///</summary>
+        [TestMethod()]
+        public void GetTheBestFloor2Test()
+        {
+            int N = 6; // TODO: Initialize to an appropriate value
+            int[] personTargets = new int[N + 1]; // TODO: Initialize to an appropriate value
+            IntelligentLift target = new IntelligentLift(N, personTargets); // TODO: Initialize to an appropriate value
+            BestFloor expected = new BestFloor() { nTargetFloor = 2, nMinFloor = 4 }; // TODO: Initialize to an appropriate value
+            BestFloor actual;
+            actual = target.GetTheBestFloor2();
             Assert.AreEqual(expected, actual);
         }
     }
