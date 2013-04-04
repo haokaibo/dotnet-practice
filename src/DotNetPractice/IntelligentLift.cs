@@ -32,6 +32,15 @@ namespace DotNetPractice
             }
             return false;
         }
+
+        public override string ToString()
+        {
+            return string.Format("Target floor[{0}], Total floors[{1}]", this.nTargetFloor, this.nMinFloor);
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 
     public class IntelligentLift
@@ -85,7 +94,7 @@ namespace DotNetPractice
                 if (N1 + N2 < N3)
                 {
                     bf.nTargetFloor = i;
-                    bf.nMinFloor = N1 + N2 - N3;
+                    bf.nMinFloor += N1 + N2 - N3;
                     N1 += N2;
                     N2 = m_PersonTargets[i];
                     N3 -= m_PersonTargets[i];
