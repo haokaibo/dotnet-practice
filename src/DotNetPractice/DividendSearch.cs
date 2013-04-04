@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace DotNetPractice
 {
     class SearchHelper
@@ -10,7 +6,7 @@ namespace DotNetPractice
         private int[] m_TargetArray;
         private int m_TargetArrayLength;
         private int m_SearchNum;
-        internal SearchHelper(int[] targetArray, int searchNum)
+        public SearchHelper(int[] targetArray, int searchNum)
         {
             m_TargetArray = targetArray.Clone() as int[];
             m_SearchNum = searchNum;

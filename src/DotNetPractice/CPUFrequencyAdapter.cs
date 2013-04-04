@@ -8,7 +8,7 @@ namespace DotNetPractice
     class CPUFrequencyAdapter
     {
         private const int sampleCount = 200;
-        internal void CPUSpeed()
+        public void CPUSpeed()
         {
             RegistryKey myRegistryKey = Registry.LocalMachine;
             myRegistryKey = myRegistryKey.OpenSubKey("HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0");
@@ -19,7 +19,7 @@ namespace DotNetPractice
 
         private Stopwatch sw = new Stopwatch();
 
-        internal void StaticAdjustFrequencyOfSingleCPU(float frequencyOfCPU)
+        public void StaticAdjustFrequencyOfSingleCPU(float frequencyOfCPU)
         {
             while (true)
             {
@@ -33,7 +33,7 @@ namespace DotNetPractice
             }
         }
 
-        internal void StaticAdjustFrequencyOfSingleCPU2(TimeSpan busyTime, TimeSpan idleTime)
+        public void StaticAdjustFrequencyOfSingleCPU2(TimeSpan busyTime, TimeSpan idleTime)
         {
             while (true)
             {
@@ -47,7 +47,7 @@ namespace DotNetPractice
             }
         }
 
-        internal void DynamicAdjustFrequencyOfSingleCPU(float level, int idleTime)
+        public void DynamicAdjustFrequencyOfSingleCPU(float level, int idleTime)
         {
             PerformanceCounter pc = new PerformanceCounter("Processor", "% Processor Time", "_Total");
             while (true)
@@ -69,7 +69,7 @@ namespace DotNetPractice
             return 0;
         }
 
-        internal void AdjustFrenquecyOfCPUToDrawSINCurve()
+        public void AdjustFrenquecyOfCPUToDrawSINCurve()
         {
 
             double PI = 3.1415926535;
