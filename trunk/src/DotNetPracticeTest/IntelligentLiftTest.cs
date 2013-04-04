@@ -76,7 +76,7 @@ namespace DotNetPracticeTest
                 personTargets[i] = i;
             }
             IntelligentLift target = new IntelligentLift(N, personTargets); // TODO: 初始化为适当的值
-            BestFloor expected = new BestFloor() { nTargetFloor = 2, nMinFloor = 4 }; // TODO: 初始化为适当的值
+            BestFloor expected = new BestFloor() { nTargetFloor = 5, nMinFloor = 26 }; // TODO: 初始化为适当的值
             BestFloor actual;
             actual = target.GetTheBestFloor1();
             Assert.AreEqual(expected, actual);
@@ -90,8 +90,12 @@ namespace DotNetPracticeTest
         {
             int N = 6; // TODO: Initialize to an appropriate value
             int[] personTargets = new int[N + 1]; // TODO: Initialize to an appropriate value
+            for (int i = 1; i <= N; i++)
+            {
+                personTargets[i] = i;
+            }
             IntelligentLift target = new IntelligentLift(N, personTargets); // TODO: Initialize to an appropriate value
-            BestFloor expected = new BestFloor() { nTargetFloor = 2, nMinFloor = 4 }; // TODO: Initialize to an appropriate value
+            BestFloor expected = new BestFloor() { nTargetFloor = 5, nMinFloor = 26}; // TODO: Initialize to an appropriate value
             BestFloor actual;
             actual = target.GetTheBestFloor2();
             Assert.AreEqual(expected, actual);
