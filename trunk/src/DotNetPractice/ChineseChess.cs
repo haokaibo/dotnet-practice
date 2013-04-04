@@ -3,14 +3,14 @@
 
     struct Pos
     {
-        internal byte a;
-        internal byte b;
+        public byte a;
+        public byte b;
     }
     class ChineseChess
     {
 
 
-        internal void FindOutAllTheUnCheckmatedPos1()
+        public void FindOutAllTheUnCheckmatedPos1()
         {
             byte b;
             for (b = 1; b <= 9; b++)
@@ -28,7 +28,7 @@
 
         }
 
-        internal void FindOutAllTheUnCheckmatedPos2()
+        public void FindOutAllTheUnCheckmatedPos2()
         {
             byte i = 81;
             while (0 != (i--))
@@ -44,7 +44,7 @@
             }
         }
 
-        internal void FindOutAllTheUnCheckmatedPos3()
+        public void FindOutAllTheUnCheckmatedPos3()
         {
             Pos p = new Pos();
             for (p.a = 1; p.a <= 9; p.a++)
