@@ -74,11 +74,13 @@ namespace DotNetPracticeTest
                 new Meeting(new DateTime(2013,4,8,9,0,0), new DateTime(2013,4,8,10,0,0)),
                 new Meeting(new DateTime(2013,4,8,9,0,0), new DateTime(2013,4,8,9,30,0)),
                 new Meeting(new DateTime(2013,4,8,9,30,0), new DateTime(2013,4,8,10,0,0)),
+                new Meeting(new DateTime(2013,4,8,9,30,0), new DateTime(2013,4,8,10,0,0)),
+                new Meeting(new DateTime(2013,4,8,10,0,0), new DateTime(2013,4,8,11,0,0)),
             };
 
             // TODO: Initialize to an appropriate value
             MeetingHelper target = new MeetingHelper(meetings); // TODO: Initialize to an appropriate value
-            int[] expected = new int[] { 1, 2, 2 }; // TODO: Initialize to an appropriate value
+            int[] expected = new int[] { 1, 2, 2, 3, 1 }; // TODO: Initialize to an appropriate value
             int[] actual;
             actual = target.GetMinimumMeetRooms();
 

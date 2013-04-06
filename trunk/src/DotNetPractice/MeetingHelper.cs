@@ -42,9 +42,10 @@ namespace DotNetPractice
                 // search all the unavailable rooms
                 for (int k = 0; k < i; k++)
                 {
-                    if (m_Meetings[k].EndTime > m_Meetings[i].BeginTime)
+                    if (m_Meetings[i].BeginTime >= m_Meetings[k].BeginTime && m_Meetings[i].BeginTime < m_Meetings[k].EndTime ||
+                        m_Meetings[i].EndTime > m_Meetings[k].BeginTime && m_Meetings[i].EndTime < m_Meetings[k].EndTime)
                     {
-                        forbiddenRooms[k] = 1;
+                        forbiddenRooms[roomNums[k] - 1] = 1;
                     }
                 }
                 // try to get the avaiable room
