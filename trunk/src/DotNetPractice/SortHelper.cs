@@ -1,40 +1,59 @@
 ﻿using System;
 namespace DotNetPractice
 {
-    public class SortingHelper
+    public class SortHelper
     {
         private int[] m_TargetArray;
-        public SortingHelper(int[] targetArray)
+        private int[] m_SortedArray;
+        public SortHelper(int[] targetArray)
         {
             if (null == targetArray || 0 == targetArray.Length)
             {
                 throw new ArgumentNullException("'targetArray' should not be null and the length of it should not be 0.");
             }
             m_TargetArray = targetArray;
+            m_SortedArray = m_TargetArray.Clone() as int[];
         }
 
-        public void QuickSort(int targetNum, int targetIndex)
+        private void QuickSort(int beginIndex, int endIndex)
         {
-            for (int i = m_TargetArray.Length - 1; i >= targetIndex; i--)
+            if (beginIndex >= endIndex)
             {
-                if (targetNum > m_TargetArray[i])
+                return;
+            }
+            int targetNum = m_SortedArray[beginIndex];
+            int i, j;
+            for (i = endIndex; i > beginIndex; i--)
+            {
+                if (m_SortedArray[i] < targetNum)
                 {
-                    m_TargetArray[targetIndex] = m_TargetArray[i];
-                    for (int j = targetIndex + 1; j < i; j++)
-                    {
-                        if (targetNum < m_TargetArray[j])
-                        {
-                            m_TargetArray[i] = m_TargetArray[j];
-                        }
-                    }
+                    m_SortedArray[beginIndex] = m_SortedArray[i];
+                    m_SortedArray[i] = targetNum;
+                    break;
                 }
             }
+            for (j = beginIndex + 1; j < endIndex; j++)
+            {
+                if (m_SortedArray[j] > targetNum)
+                {
+                    m_SortedArray[i] = m_SortedArray[j];
+                    m_SortedArray[j] = targetNum;
+                    break;
+                }
+            }
+            if (j >= i)
+            {
+                QuickSort(beginIndex, i - 1);
+                QuickSort(i + 1, endIndex);
+            }
+            else
+                QuickSort(j, i);
         }
 
-        public void QuickSort()
+        public int[] QuickSort()
         {
-            int targetNum = m_TargetArray[0];
-            QuickSort(targetNum, 0);
+            QuickSort(0, m_SortedArray.Length - 1);
+            return m_SortedArray;
         }
 
     }
