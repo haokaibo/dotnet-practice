@@ -1,15 +1,15 @@
 ﻿
 namespace DotNetPractice
 {
-    class SearchHelper
+    public class SearchHelper
     {
         private int[] m_TargetArray;
         private int m_TargetArrayLength;
         private int m_SearchNum;
-        public SearchHelper(int[] targetArray, int searchNum)
+        public SearchHelper(int[] targetArray)
         {
             m_TargetArray = targetArray.Clone() as int[];
-            m_SearchNum = searchNum;
+
             m_TargetArrayLength = m_TargetArray.Length;
         }
         /// <summary>
@@ -38,8 +38,9 @@ namespace DotNetPractice
             }
         }
 
-        public int DividendSearch()
+        public int DividendSearch(int searchNum)
         {
+            m_SearchNum = searchNum;
             return DividendSearch(0, m_TargetArrayLength);
         }
     }
