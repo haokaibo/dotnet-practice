@@ -6,12 +6,14 @@ namespace DotNetPracticeTest
 
 
     /// <summary>
-    ///This is a test class for SearchHelperTest and is intended
-    ///to contain all SearchHelperTest Unit Tests
+    ///This is a test class for SortHelperTest and is intended
+    ///to contain all SortHelperTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class SearchHelperTest
+    public class SortHelperTest
     {
+
+
         private TestContext testContextInstance;
 
         /// <summary>
@@ -62,20 +64,39 @@ namespace DotNetPracticeTest
 
 
         /// <summary>
-        ///A test for DividendSearch
+        ///A test for QuickSort
         ///</summary>
         [TestMethod()]
-        public void DividendSearchTest()
+        public void QuickSortTest()
         {
-            // ** Test the dividend search
+            int[] targetArray = { 4, 1, 3, 2 }; // TODO: Initialize to an appropriate value
+            SortHelper target = new SortHelper(targetArray); // TODO: Initialize to an appropriate value
+            int[] expected = { 1, 2, 3, 4 }; // TODO: Initialize to an appropriate value
+            int[] actual;
+            actual = target.QuickSort();
+            Assert.IsTrue(ArrayEqual(expected, actual), string.Format("expected: {0} ", expected.ToString()));
+        }
 
-            int[] targetArray = new int[] { 1, 2, 2, 4, 8 }; // TODO: Initialize to an appropriate value
-            SearchHelper target = new SearchHelper(targetArray); // TODO: Initialize to an appropriate value
-            int searchNum = 4; // TODO: Initialize to an appropriate value
-            int expected = 2; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.DividendSearch(searchNum);
-            Assert.AreEqual(expected, actual);
+        private bool ArrayEqual(int[] left, int[] right)
+        {
+            if (null == left || null == right)
+            {
+                return false;
+            }
+            if (left.Length != right.Length)
+            {
+                return false;
+            }
+            for (int i = 0; i < left.Length; i++)
+            {
+                if (left[i] == right[i])
+                {
+                    continue;
+                }
+                else
+                    return false;
+            }
+            return true;
         }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="MeetingHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchHelperTest.cs" />
+    <Compile Include="SortHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetPractice\DotNetPractice.csproj">
