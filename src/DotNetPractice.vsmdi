@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="Beauty of programming" id="3bf0a99a-1ede-4a35-b438-ac8e152e9a32" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Tests for Beauty of programming.</Description>
+  </TestList>
+  <TestList name="Basic Algrithm" id="5f7d5bae-1c47-45f9-944a-1ef9c4c54130" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>The tests for basic algrithm.</Description>
+    <TestLinks>
+      <TestLink id="844a38e1-a416-aa85-209a-21b8d2e8cf69" name="QuickSortArrayFailedOnArgumentIsNullTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="547ad2d6-d0eb-1624-a0b2-f9a859b0f742" name="DividendSearchTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9d172d7f-b15c-f758-b8eb-2bdd4b193d04" name="QuickSortArrayTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
   <TestList name="测试列表" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
     <RunConfiguration id="acff151e-040b-49c4-bed7-ff95ccb099f4" name="本地" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   </TestList>

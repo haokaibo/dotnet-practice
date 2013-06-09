@@ -52,7 +52,7 @@
     <Compile Include="PrefixSorting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SortHelper.cs" />
+    <Compile Include="SortingHelper.cs" />
     <Compile Include="TheSequenceOfFieldsInType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
