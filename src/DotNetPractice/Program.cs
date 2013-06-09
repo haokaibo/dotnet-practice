@@ -66,7 +66,8 @@ namespace DotNetPractice
             //B1 b = new B1();
             //b.Test();
             //((B)b).Test();
-
+            Console.WriteLine("=====Algrithm practices=====");
+           
             //b.Test1(1, "a");
             Console.WriteLine("1: Chinese Chess Checkmate.");
             Console.WriteLine("2: CPUFrequencyAdapter.");
