@@ -67,11 +67,12 @@ namespace DotNetPractice
             //b.Test();
             //((B)b).Test();
             Console.WriteLine("=====Algrithm practices=====");
-           
+
             //b.Test1(1, "a");
             Console.WriteLine("1: Chinese Chess Checkmate.");
             Console.WriteLine("2: CPUFrequencyAdapter.");
             Console.WriteLine("3: Prefix sorting.");
+            Console.WriteLine("4: Array demo.");
 
             Console.WriteLine("Please input the number of the Test you want to try:");
             int testNumber = int.Parse(Console.ReadLine());
@@ -92,6 +93,24 @@ namespace DotNetPractice
                     var prefixSorting = new PrefixSorting(new int[] { 3, 2, 1, 6, 5, 4, 9, 8, 7, 0 });
                     prefixSorting.Run();
                     prefixSorting.Output();
+                    break;
+                case 4:
+                    // ** Test array demo
+                    // Array-of-arrays (jagged array)
+                    int arrayLength = 5;
+                    int[][] scores = new int[arrayLength][];
+                    Console.WriteLine("Created the array scores: int[{0}][]", arrayLength);
+                    // Create the jagged array
+                    for (int i = 0; i < scores.Length; i++)
+                    {
+                        scores[i] = new int[i + 3];
+                        Console.WriteLine("Length of row {0} is {1}", i, scores[i].Length);
+                        for (int j = 0; j < scores[i].Length; j++)
+                        {
+                            scores[i][j] = i * j;
+                            Console.WriteLine("scores[{0}][{1}] = {2}", i, j, scores[i][j]);
+                        }
+                    }
                     break;
                 default:
                     Console.WriteLine(1 ^ 3);
