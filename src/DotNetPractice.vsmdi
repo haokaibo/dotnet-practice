@@ -8,6 +8,7 @@
     <TestLinks>
       <TestLink id="844a38e1-a416-aa85-209a-21b8d2e8cf69" name="QuickSortArrayFailedOnArgumentIsNullTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       <TestLink id="547ad2d6-d0eb-1624-a0b2-f9a859b0f742" name="DividendSearchTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="d90a4d2d-d38d-601c-8082-04c13b02ea0f" name="InsertionSortTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       <TestLink id="9d172d7f-b15c-f758-b8eb-2bdd4b193d04" name="QuickSortArrayTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     </TestLinks>
   </TestList>

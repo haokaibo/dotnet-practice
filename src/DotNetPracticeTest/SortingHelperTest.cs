@@ -1,6 +1,6 @@
-﻿using DotNetPractice;
+﻿using System;
+using DotNetPractice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace DotNetPracticeTest
 {
@@ -123,6 +123,23 @@ namespace DotNetPracticeTest
             int[] originArray = null; // TODO: 初始化为适当的值
             int[] actual;
             actual = new SortingHelper().QuickSortArray(originArray);
+        }
+
+        /// <summary>
+        ///A test for InsertionSort
+        ///</summary>
+        [TestMethod()]
+        public void InsertionSortTest()
+        {
+            SortingHelper target = new SortingHelper(); // TODO: Initialize to an appropriate value
+            int[] originArray = new int[] { 3, 2, 1 }; // TODO: Initialize to an appropriate value
+            int[] expected = new int[] { 1, 2, 3 }; // TODO: Initialize to an appropriate value
+            int[] actual;
+            actual = target.InsertionSort(originArray);
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.AreEqual(expected[i], actual[i]);
+            }
         }
     }
 }

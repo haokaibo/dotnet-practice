@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DotNetPractice
 {
@@ -31,7 +28,7 @@ namespace DotNetPractice
                 return m_sortedArray;
             }
             int i = low, j = high;
-            for (int key = m_sortedArray[low]; i < j;  j--)
+            for (int key = m_sortedArray[low]; i < j; j--)
             {
                 while (key < m_sortedArray[j] && i < j)
                 {
@@ -51,6 +48,24 @@ namespace DotNetPractice
             QuickSortArray(i + 1, high);
 
             return m_sortedArray;
+        }
+
+        public int[] InsertionSort(int[] originArray)
+        {
+            int[] sortedArray = originArray;
+            if (null != sortedArray)
+            {
+                for (int i = 0, arrayLength = sortedArray.Length; i < arrayLength - 1; i++)
+                {
+                    for (int j = i + 1; j > 0; j--)
+                    {
+                        int temp = sortedArray[j];
+                        sortedArray[j] = sortedArray[j - 1];
+                        sortedArray[j - 1] = temp;
+                    }
+                }
+            }
+            return sortedArray;
         }
     }
 }
