@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ChineseChess.cs" />
     <Compile Include="CPUFrequencyAdapter.cs" />
+    <Compile Include="ForumHelper.cs" />
     <Compile Include="MeetingHelper.cs" />
     <Compile Include="SearchHelper.cs" />
     <Compile Include="IntelligentLift.cs" />
