@@ -73,6 +73,7 @@ namespace DotNetPractice
             Console.WriteLine("2: CPUFrequencyAdapter.");
             Console.WriteLine("3: Prefix sorting.");
             Console.WriteLine("4: Array demo.");
+            Console.WriteLine("5: 24 points game.");
 
             Console.WriteLine("Please input the number of the Test you want to try:");
             int testNumber = int.Parse(Console.ReadLine());
@@ -89,7 +90,7 @@ namespace DotNetPractice
                     // new CPUFrequencyAdapter().DynamicAdjustFrequencyOfSingleCPU(100, 10);
                     new CPUFrequencyAdapter().AdjustFrenquecyOfCPUToDrawSINCurve(); break;
                 case 3:
-                    // ** Test the prefix sorting
+                    // Test the prefix sorting
                     var prefixSorting = new PrefixSorting(new int[] { 3, 2, 1, 6, 5, 4, 9, 8, 7, 0 });
                     prefixSorting.Run();
                     prefixSorting.Output();
@@ -111,6 +112,13 @@ namespace DotNetPractice
                             Console.WriteLine("scores[{0}][{1}] = {2}", i, j, scores[i][j]);
                         }
                     }
+                    break;
+                case 5:
+                    // Test the 24 points game
+                    TwentyFourPointsGame pointsGame = new TwentyFourPointsGame();
+                    pointsGame.number = new double[4] { 1, 2, 3, 4 };
+                    pointsGame.result = new string[4] { "1", "2", "3", "4" };
+                    pointsGame.PointsGame(4);
                     break;
                 default:
                     Console.WriteLine(1 ^ 3);
