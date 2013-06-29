@@ -2,6 +2,13 @@
 <TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestList name="Beauty of programming" id="3bf0a99a-1ede-4a35-b438-ac8e152e9a32" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
     <Description>Tests for Beauty of programming.</Description>
+    <TestLinks>
+      <TestLink id="a2365c3f-5549-31fc-5baa-d62f651dd10c" name="GetTheBestFloor1Test" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="2aed2e40-69d1-aedf-7773-a33861f8418e" name="GetMinimumMeetRoomsTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="579c9c52-ed54-9a84-4d26-588d890d1b63" name="FindForumBestInvolverTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="710e6907-ab9e-064f-f34e-a2256178ada6" name="GetTheBestFloor2Test" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="535fc6d4-75c2-320c-eaa3-92faacdf82a5" name="PointsGameTest" storage="dotnetpracticetest\bin\debug\dotnetpracticetest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
   </TestList>
   <TestList name="Basic Algrithm" id="5f7d5bae-1c47-45f9-944a-1ef9c4c54130" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
     <Description>The tests for basic algrithm.</Description>
