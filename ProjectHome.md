@@ -1,0 +1,1 @@
+This is a project for the programming practice on the .NET platform.The app style is always windows console which is easy to run on the client.
